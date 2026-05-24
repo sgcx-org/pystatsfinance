@@ -2,12 +2,21 @@
 PyStatsFinance: Financial and quantitative statistical computing.
 
 Part of the PyStatistics open-core ecosystem (alongside ``pystatistics`` and
-``pystatsbio``). This package is in early reservation status: the public API for
-financial statistics is forthcoming. See the README for planned scope.
+``pystatsbio``). Provides finance-specific methods built on the general
+statistical layer.
+
+Usage:
+    from pystatsfinance import performance
+    sharpe = performance.sharpe_ratio(returns)
 """
 
-__version__ = "0.0.1"
+__version__ = "0.1.0"
 __author__ = "Hai-Shuo"
 __email__ = "contact@sgcx.org"
 
-__all__ = ["__version__"]
+from pystatsfinance import performance
+
+__all__ = [
+    "__version__",
+    "performance",
+]
